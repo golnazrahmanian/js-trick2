@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        figure {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        h1 {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-transform: uppercase;
+            margin: 2%;
+        }
+
+        figure>img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3%;
+        }
+
+        main>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+        }
+
+        main>div>img {
+            width: 20%;
+        }
+
+        main>div>a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>first solution</h1>
+        <figure>
+            <img src="img/off.jpg" id="lamp">
+        </figure>
+        <div onclick="_button()"><img src="img/button_off.png" id="button"></div>
+    </main>
+    <script>
+        let i = 0
+        function _button() {
+            let _lamp = document.getElementById("lamp")
+            let _button = document.getElementById("button")
+            if (i % 2) {
+                _lamp.src = "img/off.jpg";
+                _button.src = "img/button_off.png";
+            }
+            else {
+                _lamp.src = "img/on.jpg";
+                _button.src = "img/button_on.png";
+            }
+            i++
+        }
+    </script>
+</body>
+
+</html>
